@@ -1,0 +1,48 @@
+.container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2000;
+    /* match page animated gradient + blur */
+    background: linear-gradient(-45deg, #1d3557, #2a9d8f, #e76f51, #264653);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    backdrop-filter: blur(8px);
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.blob {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.name {
+    position: relative;
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-weight: 700;
+    color: #f1faee;
+    text-align: center;
+    z-index: 1;
+}
+
+.letter {
+    display: inline-block;
+    margin: 0 0.05ch;
+}

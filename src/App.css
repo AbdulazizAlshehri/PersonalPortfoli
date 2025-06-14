@@ -1,0 +1,38 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.app-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  /* animated gradient background */
+  background: linear-gradient(-45deg, #1d3557, #2a9d8f, #e76f51, #264653);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+}
+
+.app-container::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
